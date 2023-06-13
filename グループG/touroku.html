@@ -5,59 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
-    <title>拾得物管理システム</title>
+    <title>拾得物管理システム 検索画面</title>
   </head>
   <body>
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-success">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"><i class="bi bi-search"></i> 拾得物管理システム</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">拾得物登録機能</a>
-              <ul class="dropdown-menu bg-success" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">拾得者（ユーザ）登録 <i class="bi bi-person"></i></a></i></li>
-                <li><a class="dropdown-item" href="#">拾得物登録 <i class="bi bi-file-earmark-arrow-up"></i></a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">拾得物検索機能</a>
-              <ul class="dropdown-menu bg-success" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">拾得物検索 <i class="bi bi-search"></i></a></li>
-                <li><a class="dropdown-item" href="#">遺失物捜索依頼 <i class="bi bi-file-earmark-check"></i></a></li>
-                <li><a class="dropdown-item" href="#">遺失物捜索一覧 <i class="bi bi-table"></i></a></li>
-              </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><i class="bi bi-search"></i> 拾得物管理システム</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">拾得物一覧</a>
+                <ul class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">拾得物検索 <i class="bi bi-person"></i></a></i></li>
+                  <li><a class="dropdown-item" href="#">情報登録・更新 <i class="bi bi-file-earmark-arrow-up"></i></a></li>
+                </ul>
               </li>
-            </ul>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-    <div class="container">
+      <div class="container">
         <div class="row">
-            <div class="col p-4 text-white rounded mt-3 bg-success">
+            <div class="col p-5 text-black rounded mt-3 bg-warning">
                 <h1 class="display-4 fst-italic">拾得物登録・更新</h1>
                 <hr>
-                <p>職員が届けられた拾得物を登録更新を行う</p>
+                <p>職員が届けられた拾得物の登録・更新を行う</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col p-4  text-white rounded mt-3 bg-success">
-                <h3 class="display-4 fst-italic">新規登録</h3>
-                <hr>
-                <img src="img/gazou.png" class="img-fluid"   alt="拾得物画像">
-                
+        <div class="container">
+            <div class="row">
+                <div class="col p-20 text-white rounded mt-3 bg-warning">
+                  　<h4 style="text-align: center" padding 10px;>
+                    <div class="From">
+                        <div class="From-Item">
+                            <p class="From-Item-Label">
+                                <samp class="From-Item-Label-required"></samp>
+                            </p>
+                            名称　　 <input type="text" class="From-Item-Input" placeholder="名称">
+                        　<p>時間帯　<input type="text" class="From-Item-Input" placeholder="時間帯"></p>
+                        </div>
+                    </div>
+                    </h4>
+                  <h4 padding 10px;>
+                    <div class="From-Item">
+                        <p class="From-Item-Label">
+                            <samp class="From-Item-Label-required"></samp>
+                        </p>
+                       <font-color = " #000000 ">
+                        <p>写真を挿入 </p> <input type="file" name="img"> 
+                       </font-color>
+                    </div>
+                </h4>
+                <h4 style="text-align: right" padding 10px;>
+                  <div class="From-Item">
+                      <p class="From-Item-Label isMsg">
+                          <samp class="From-Item-Label-Required"></samp>
+                      </p>
+                      <textarea class="From-Item-Textarea" placeholder="特徴"></textarea>
+                      <input type="submit" class="From-Button" value="登録する">
+                  </div>
+              </h4>
+                </div>
+                </div>
             </div>
-        </div>
-    </div>
-    
-
-    <footer class="fixed-bottom bg-success text-light text-end">
-        <div>文教大学 情報学部 情報システム学科 プロジェクト演習BC</div>
+    <footer class="fixed-bottom bg-warning text-dark text-end" >
+     <div style = "text-align: center">
+        文教大学 情報学部 情報システム学科 プロジェクト演習BC
+     </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
